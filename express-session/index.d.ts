@@ -1,4 +1,4 @@
-import {Request, RequestHandler} from 'express'
+import {Request, Response, RequestHandler} from 'express'
 
 declare class Cookie {
     secure?: boolean
@@ -30,6 +30,10 @@ export interface Session extends RequestHandler {
 }
 
 export interface RequestSession extends Request {
+    session: any
+}
+
+export interface ResponseSession extends Response {
     session: any
 }
 
